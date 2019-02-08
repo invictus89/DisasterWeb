@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="RainForCombo">
+	<resultMap type="RainForCombo" id="RainForComboResult">
+		<result property="date" column="date" />
+		<result property="rainfall" column="rainfall" />
+		<result property="code" column="code" />
+
+	</resultMap>	
+	<select id="getRainForCombo" resultType ="RainForCombo" parameterType="hashmap">
+		select date, rainfall,code from test.tb_weather_rainfall where code = #{selectCode} and substring(date,1,4) = #{selectYear}
+	</select>	
+</mapper>

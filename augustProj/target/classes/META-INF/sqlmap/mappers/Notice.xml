@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Notice">
+	<resultMap type="Notice" id="NoticeResult">
+		<result property="no_num" column="no_num" />
+		<result property="time" column="time" />
+		<result property="value" column="value" />
+		<result property="route" column="route" />
+		<result property="content" column="content" />
+		<result property="percentage" column="percentage" />
+	</resultMap>
+	<select id="getNotice" resultType = "notice">
+		select * from tb_notice order by time desc limit 5
+	</select>
+</mapper>

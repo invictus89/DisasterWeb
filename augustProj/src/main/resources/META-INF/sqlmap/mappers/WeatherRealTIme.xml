@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="WeatherRealTIme">
+	<resultMap type="WeatherRealTIme" id="WeatherRealTImeResult">
+		<result property="no_num" column="no_num" />
+		<result property="location" column="location" />
+		<result property="cloud_1" column="cloud_1" />
+		<result property="cloud_2" column="cloud_2" />
+		<result property="temper" column="temper" />
+		<result property="dew" column="dew" />
+		<result property="pre" column="pre" />
+		<result property="snow" column="snow" />
+		<result property="hum" column="hum" />
+		<result property="wind" column="wind" />
+		<result property="date" column="date" />
+		<result property="time" column="time" />
+		<result property="lat" column="lat" />
+		<result property="lng" column="lng" />
+		<result property="sumPre" column="sumPre" />
+	</resultMap>
+	
+	<select id="getWeatherRealTIme" resultType ="WeatherRealTIme" parameterType="String">
+		SELECT a.*, b.lat, b.lng, truncate(sum(a.pre),1) as sumPre FROM test.tb_weather_data a join test.tb_weather_latlng b on a.location = b.loc where time= 21 and substring(a.date,1,7) = #{weatherFordate} group by location;
+	</select>
+
+	
+</mapper>

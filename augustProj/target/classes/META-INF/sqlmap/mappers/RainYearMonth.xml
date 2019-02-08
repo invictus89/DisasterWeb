@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="RainYearMonth">
+	<resultMap type="RainYearMonth" id="RainYearMonthResult">
+		<result property="date" column="date" />
+		<result property="rainfall" column="rainfall" />
+		<result property="code" column="code" />
+		<result property="code_name" column="code_name" />
+		<result property="shiname" column="shiname" />
+
+	</resultMap>
+
+	<select id="weatherMonthSelect" resultType ="RainYearMonth" parameterType="hashmap">
+	SELECT * FROM (SELECT R.DATE, R.RAINFALL, R.CODE, C.CODE_NAME, C.SHINAME
+		FROM tb_weather_rainfall R, tb_weather_codename C
+		WHERE C.codenum=R.CODE and  R.DATE = #{selectYearAndMonth} and C.SHINAME =#{selectLocal}
+		)as b 
+	</select>
+	
+	<select id="weatherMonthSelectG" resultType ="RainYearMonth" parameterType="String">
+	
+	
+	SELECT * FROM (SELECT R.DATE, R.RAINFALL, R.CODE, C.CODE_NAME, C.SHINAME
+		FROM tb_weather_rainfall R, tb_weather_codename C
+		WHERE C.codenum=R.CODE and  R.DATE = #{selectYearAndMonth}  and (C.SHINAME like concat('%','광역시','%') or  C.SHINAME like concat('%','특별','%')) 
+		)as b 
+		
+	</select>
+
+</mapper>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="EarthquakeCount">
+	<resultMap type="EarthquakeCount" id="EarthquakeCountResult">
+		<result property="area02" column="area02" />
+		<result property="count02" column="count02" />
+	</resultMap>
+	<select id="earthquakecount" resultType ="EarthquakeCount" >
+		select substring_index(substring_index(title, ' ', 2), ' ', 1) as Area02, count(*) as count02 from tb_earthquake_fast b where substring_index(substring_index(title, ' ', 2), ' ', 1) not in('경기만','북한') group by 1 order by 1;
+	</select>
+</mapper>

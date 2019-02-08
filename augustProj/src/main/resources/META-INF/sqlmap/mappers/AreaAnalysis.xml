@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="AreaAnalysis">
+	<resultMap type="AreaAnalysis" id="AreaAnalysisResult">
+		<result property="area" column="area" />
+		<result property="magnitudeUnderOne" column="magnitudeUnderOne" />
+		<result property="magnitudeUnderTwo" column="magnitudeUnderTwo" />
+		<result property="magnitudeUnderThree" column="magnitudeUnderThree" />
+		<result property="magnitudeUnderFour" column="magnitudeUnderFour" />
+		<result property="magnitudeUnderFive" column="magnitudeUnderFive" />
+		<result property="magnitudeUnderSix" column="magnitudeUnderSix" />
+		<result property="magnitudeAndOverSix" column="magnitudeAndOverSix" />
+	</resultMap>
+	<select id="getAreaAnalysis" resultType ="AreaAnalysis" >
+	  select substring(title,1,2) area,count(*) eqCountArea,count(case when degree &gt;= 0 and degree &lt; 1 then 1 end) 'magnitudeUnderOne',
+								   count(case when degree &gt;= 1 and degree &lt; 2 then 1 end) 'magnitudeUnderTwo',
+								   count(case when degree &gt;= 2 and degree &lt; 3 then 1 end) 'magnitudeUnderThree',
+                                   count(case when degree &gt;= 3 and degree &lt; 4 then 1 end) 'magnitudeUnderFour',
+                                   count(case when degree &gt;= 4 and degree &lt; 5 then 1 end) 'magnitudeUnderFive',
+                                   count(case when degree &gt;= 5 and degree &lt; 6 then 1 end) 'magnitudeUnderSix',
+                                   count(case when degree &gt;= 6 then 1 end)'magnitudeAndOverSix'                       
+	        from tb_earthquake_fast group by  substring(title,1,2)	  
+	</select>
+</mapper>

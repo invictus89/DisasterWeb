@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Realtime">
+	<resultMap type="Realtime" id="RealtimeResult">
+		<result property="eqid" column="eqid" />
+		<result property="time" column="time" />
+		<result property="degree" column="degree" />
+		<result property="title" column="title" />
+		<result property="lat" column="lat" />
+		<result property="lng" column="lng" />
+		<result property="tag" column="tag" />
+		<result property="url" column="url" />
+		<result property="hour" column="hour" />
+		<result property="deg1" column="deg1" />
+		<result property="deg2" column="deg2" />
+		<result property="deg3" column="deg3" />
+		<result property="count_eq" column="count_eq" />
+		<result property="avg_eq" column="avg_eq" />
+	</resultMap>
+	<select id="getRealtime" resultType = "realtime" parameterType="realtime" >
+		select * from tb_earthquake_fast where time like CONCAT('%',#{time},'%')
+	</select>
+	<select id="getCurrentRt" resultType = "realtime" parameterType="realtime" >
+		SELECT * FROM tb_earthquake_fast where date_format(time, '%Y-%m-%d') = '2017-08-29'
+	</select>
+	<select id="month_detail" resultType="realtime" parameterType="String">
+	 	select * from tb_earthquake_fast where extract(month from time)=#{select_month} ORDER BY degree DESC LIMIT 3
+	</select>
+	<select id="year_detail" resultType="realtime" parameterType="String">
+		select * from tb_earthquake_fast where extract(year from time)=#{select_year} ORDER BY degree DESC LIMIT 3	
+	</select>
+	<select id="total_num_eq" resultType="int">
+		select count(*) from tb_earthquake_fast
+	</select>	
+	<select id="avg_eq" resultType="String">
+		select round(avg(degree),2) from tb_earthquake_fast
+	</select>
+	<select id="max_eq" resultType="String">
+		select max(degree) from tb_earthquake_fast
+	</select>
+	<select id="min_eq" resultType="String">
+		select min(degree) from tb_earthquake_fast
+	</select>	
+	<select id="has_num_eq" resultType="int">
+		select count(*)*8 from tb_earthquake_fast
+	</select>	
+
+</mapper>
+
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias alias="Shelter" type="com.ac.augustProj.vo.Shelter"/>
+		<typeAlias alias="Notice" type="com.ac.augustProj.vo.Notice"/>
+		<typeAlias alias="AreaAnalysis" type="com.ac.augustProj.vo.AreaAnalysis"/>
+		<typeAlias alias="EarthYear" type="com.ac.augustProj.vo.EarthYear"/>
+		<typeAlias alias="DegPerHour" type="com.ac.augustProj.vo.DegPerHour"/>
+		<typeAlias alias="Realtime" type="com.ac.augustProj.vo.Realtime"/>
+		<typeAlias alias="ShelterCount" type="com.ac.augustProj.vo.ShelterCount"/>
+		<typeAlias alias="EarthquakeCount" type="com.ac.augustProj.vo.EarthquakeCount"/>
+		<typeAlias alias="Shelter_accommodate" type="com.ac.augustProj.vo.Shelter_accommodate"/>
+		<typeAlias alias="Earthquake_Forecast" type="com.ac.augustProj.vo.Earthquake_Forecast"/>
+		<typeAlias alias="ShelterAreaForPreference" type="com.ac.augustProj.vo.ShelterAreaForPreference"/>
+		<typeAlias alias="WthYear" type="com.ac.augustProj.vo.WthYear"/>
+		<typeAlias alias="RainYearMonth" type="com.ac.augustProj.vo.RainYearMonth"/>
+		<typeAlias alias="RainForCombo" type="com.ac.augustProj.vo.RainForCombo"/>
+		<typeAlias alias="WeatherCodeName" type="com.ac.augustProj.vo.WeatherCodeName"/>
+		<typeAlias alias="Weather_Forecast" type="com.ac.augustProj.vo.Weather_Forecast"/>
+		<typeAlias alias="WeatherRealTIme" type="com.ac.augustProj.vo.WeatherRealTIme"/>
+	</typeAliases>
+	<mappers>
+		<mapper resource="META-INF/sqlmap/mappers/Realtime.xml"/>
+		<mapper resource="META-INF/sqlmap/mappers/Shelter.xml"/>
+		<mapper resource="META-INF/sqlmap/mappers/Notice.xml"/>
+		<mapper resource="META-INF/sqlmap/mappers/AreaAnalysis.xml"/>
+		<mapper resource="META-INF/sqlmap/mappers/EarthYear.xml"/>
+		<mapper resource="META-INF/sqlmap/mappers/DegPerHour.xml"/>
+		<mapper resource="META-INF/sqlmap/mappers/ShelterCount.xml"/>
+		<mapper resource="META-INF/sqlmap/mappers/EarthquakeCount.xml"/>
+		<mapper resource="META-INF/sqlmap/mappers/Shelter_accommodate.xml"/>
+		<mapper resource="META-INF/sqlmap/mappers/Earthquake_Forecast.xml"/>
+		<mapper resource="META-INF/sqlmap/mappers/ShelterAreaForPreference.xml"/>
+		<mapper resource="META-INF/sqlmap/mappers/WthYear.xml"/>
+		<mapper resource="META-INF/sqlmap/mappers/RainYearMonth.xml"/>
+		<mapper resource="META-INF/sqlmap/mappers/RainForCombo.xml"/>
+		<mapper resource="META-INF/sqlmap/mappers/WeatherCodeName.xml"/>
+		<mapper resource="META-INF/sqlmap/mappers/Weather_Forecast.xml"/>
+		<mapper resource="META-INF/sqlmap/mappers/WeatherRealTIme.xml"/>
+	</mappers>
+</configuration>

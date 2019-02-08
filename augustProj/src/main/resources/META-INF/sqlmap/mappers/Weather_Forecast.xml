@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Weather_Forecast">
+	<resultMap type="Weather_Forecast" id="Weather_ForecastResult">
+		<result property="loc" column="loc" />
+		<result property="lat" column="lat" />
+		<result property="lng" column="lng" />
+		<result property="hour" column="hour" />
+		<result property="log_reg" column="log_reg" />
+		<result property="log_reg_ac" column="log_reg_ac" />
+		<result property="svm" column="svm" />
+		<result property="svm_ac" column="svm_ac" />
+		<result property="RForest" column="RForest" />
+		<result property="RForest_ac" column="RForest_ac" />
+		<result property="date" column="date" />
+		<result property="rainMrker" column="rainMarker" />
+	</resultMap>
+	<select id="forecastweather" resultType ="Weather_Forecast" >
+		select F.loc, L.lat, L.lng, F.hour, F.log_reg, F.log_reg_ac, F.svm, F.svm_ac, F.RForest, F.RForest_ac, F.date,
+		 case when greatest(F.log_reg_ac, F.svm_ac, F.RForest_ac) = F.log_reg_ac then F.log_reg 
+ 				when greatest(F.log_reg_ac, F.svm_ac, F.RForest_ac) = F.svm_ac then F.svm
+				else F.RForest end as rainMarker
+		from tb_forecast_weather F 
+		join tb_weather_latlng L 
+		on F.loc = L.loc;
+		<!--  where date_format(date, '%Y-%m-%d') = date_format(sysdate(),'%Y-%m-%d'); -->
+	</select>
+</mapper>

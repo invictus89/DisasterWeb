@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="EarthYear">
+	<resultMap type="EarthYear" id="EarthYearResult">
+		<result property="eq_year" column="eq_year" />
+		<result property="eq_countyear" column="eq_countyear" />
+	</resultMap>
+	<select id="yearList" resultType = "EarthYear" >
+		select extract(year from time) eq_year,count(*) eq_countyear from  tb_earthquake_fast group by extract(year from time)
+	</select>
+	<select id="monthList" resultType = "EarthYear" >
+		select extract(month from time) eq_year,count(*) eq_countyear from  tb_earthquake_fast group by extract(month from time)
+	</select>
+</mapper>

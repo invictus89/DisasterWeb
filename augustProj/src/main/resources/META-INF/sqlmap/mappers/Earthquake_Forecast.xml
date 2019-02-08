@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Earthquake_Forecast">
+	<resultMap type="Earthquake_Forecast" id="Earthquake_ForecastResult">
+		<result property="loc" column="loc" />
+		<result property="month_dist" column="month_dist" />
+		<result property="day_dist" column="day_dist" />
+		<result property="lat_op" column="lat_op" />
+		<result property="lng_op" column="lng_op" />
+		<result property="op_name" column="op_name" />
+		<result property="date" column="date" />
+	</resultMap>
+	<select id="forecastearthquake" resultType ="Earthquake_Forecast" >
+	 <!--  select * from tb_forecast_earthquake where date_format(date, '%Y-%m-%d') = date_format(now(),'%Y-%m-%d'); -->
+	 select * from tb_forecast_earthquake
+	</select>
+</mapper>

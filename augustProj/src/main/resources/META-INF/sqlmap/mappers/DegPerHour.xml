@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="DegPerHour">
+	<resultMap type="DegPerHour" id="DegPerHourResult">
+		<result property="hour" column="hour" />
+		<result property="deg1" column="deg1" />
+		<result property="deg2" column="deg2" />
+		<result property="deg3" column="deg3" />
+	</resultMap>
+	<select id= "getInfoPerHour" resultType = "DegPerHour" >
+		select extract(hour from time) as hour,
+			sum(case when degree &lt; 2.5 then 1 else 0 end) as deg1 ,
+			sum(case when degree &gt;= 2.5 and degree &lt; 3.5 then 1 else 0 end) as deg2 ,
+			sum(case when degree &gt; 3.5 then 1 else 0 end) as deg3 
+			from tb_earthquake_fast
+			group by extract(hour from time) 
+	</select>
+</mapper>
