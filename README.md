@@ -11,3 +11,6 @@
 * CSS / HTML / Javascript / jQuery / Spring Framework / mybatis / JSTL
 
 ## 구성
+### [augustProj/src/main/java/com/ac/augustProj/]
+### [augustProj/src/main/resources]
+### [
