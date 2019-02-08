@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.ac.augustProj.service.A01_DisasterService;
 import com.ac.augustProj.vo.AreaAnalysis;
 import com.ac.augustProj.vo.Earthquake_Forecast;
-import com.ac.augustProj.service.A01_DisasterService;
 import com.ac.augustProj.vo.Realtime;
 import com.ac.augustProj.vo.Weather_Forecast;
 

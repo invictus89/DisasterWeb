@@ -5,8 +5,6 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import java.util.HashMap;
-import java.util.Map;
 
 import com.ac.augustProj.vo.RainForCombo;
 import com.ac.augustProj.vo.RainYearMonth;
@@ -14,6 +12,9 @@ import com.ac.augustProj.vo.WeatherCodeName;
 import com.ac.augustProj.vo.WeatherRealTIme;
 import com.ac.augustProj.vo.Weather_Forecast;
 import com.ac.augustProj.vo.WthYear;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @Repository
 public class A02_weatherDao {

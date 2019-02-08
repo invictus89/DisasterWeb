@@ -1,4 +1,4 @@
-package com.ac.augustProj;
+package com.ac.augustProj.home;
 
 import java.text.DateFormat;
 import java.util.Date;
