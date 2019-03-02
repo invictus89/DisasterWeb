@@ -16,11 +16,12 @@
 					<img class="main-banner" src="img/logo.png">
 				</a>
 			</div>
-			<div class="navbar-header-main">
-				<a class="navbar-brand top-Menu" href="${path}/mainProc.do?leftPage=earthquake&midPage=realtime">실시간</a>
-	       		<a class="navbar-brand top-Menu" href="${path}/mainProc.do?leftPage=earthquake&midPage=analy">통합 분석</a>
-				<a class="navbar-brand top-Menu" href="${path}/mainProc.do?leftPage=earthquake&midPage=pred">예측</a>
-			</div>
+			<ul class="nav navbar-nav">
+				<li><a class="navbar-brand top-Menu" href="${path}/mainProc.do?leftPage=earthquake&midPage=realtime">실시간</a></li>
+	       		<li><a class="navbar-brand top-Menu" href="${path}/mainProc.do?leftPage=earthquake&midPage=analy">통합 분석</a></li>
+				<li><a class="navbar-brand top-Menu" href="${path}/mainProc.do?leftPage=earthquake&midPage=pred">예측</a></li>
+			</ul>
+			
 			<div class="ui-onoff">
 				<div>
 					<span class="glyphicon glyphicon-stop"></span> Twitter
@@ -35,6 +36,7 @@
 					<span class="glyphicon glyphicon-stop"></span> Naver
 				</div>
 			</div>
+			
 			<div class="ui-keyword">
 				<a class="dropdown dropdown-btn real-drop">
 					<span class="n-icon dash-ico">N</span>
@@ -43,6 +45,6 @@
 				<ul class="dropdown-menu" id="myDropdowon-naver">
 				</ul>
 			</div>
-			<div class="current-clock"></div>
+			
 		</div>
 	</nav>

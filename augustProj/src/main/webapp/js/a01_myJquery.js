@@ -123,11 +123,6 @@ $(function() {
 				$(".dropdown-menu.alert-dropdown > ul").children().css("display", "none");
 			});
 	var mapCall = $("#mapCall").val();
-	
-	// 시계
-	setInterval(function(){
-		setTimeout("printClock()",0);
-	},1000);
 
 });
 
@@ -539,27 +534,6 @@ function geoCenter(geocoder, address, resultsMap) {
 	});
 }
 
-
-function printClock() {
-    var currentDate = new Date();
-	var dateString = dateFormat(currentDate);
-	var icon = "<span class='glyphicon glyphicon-time'></span>";
-    var amPm = 'AM'; 
-    var currentHours = addZeros(currentDate.getHours(),2); 
-    var currentMinute = addZeros(currentDate.getMinutes() ,2);
-    var currentSeconds =  addZeros(currentDate.getSeconds(),2);
-    
-    if(currentHours >= 12){
-    	amPm = 'PM';
-    	currentHours = addZeros(currentHours - 12,2);
-    }
-
-    if(currentSeconds >= 50){
-       currentSeconds = '<span style="color:#de1951;">'+currentSeconds+'</span>'
-    }
-    $(".current-clock").html(icon+" "+dateString+" "+currentHours+":"+currentMinute+":"+currentSeconds +" "+ amPm);
-    
-}
 
 function addZeros(num, digit) { 
 	  var zero = '';

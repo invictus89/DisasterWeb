@@ -32,7 +32,7 @@ $(function(){
 		]);
 
 			var classicOptions = {
-			  height: 400,
+			  height: 300,
 			  backgroundColor:{fill:'transparent'},
 			  animation: { startup: true, duration: 2500, easing: 'out' },
 			  lineWidth: 5,
@@ -48,8 +48,8 @@ $(function(){
 			    1: {targetAxisIndex: 1}
 			  },
 			  chartArea:{
-					width: '80%',
-					height: '75%'
+					width: '75%',
+					height: '60%'
 				},
 			  vAxes: {
 			    // Adds titles to each axis.
@@ -64,7 +64,7 @@ $(function(){
 	   	    		titleTextStyle: {
 		    				fontName:'Jeju Gothic',
 			    		    color: 'white',
-			    		    fontSize: 15,
+			    		    fontSize: 11,
 			    		    bold: false,
 			    		    italic: true
 			    		  },
@@ -80,15 +80,14 @@ $(function(){
 	   	    		  titleTextStyle: {
 		    				fontName:'Jeju Gothic',
 				    		    color: 'white',
-				    		    fontSize: 15,
+				    		    fontSize: 11,
 				    		    bold: false,
 				    		    italic: true
 				    		  },	
 			    }
 			  },
 			  hAxis: {
-			    ticks: ['강원도','경기도','경상남도','경상북도','광주광역시','대구광역시','대전광역시','부산광역시','서울특별시','세종특별자치시','울산광역시','인천광역시','전라남도','전라북도','제주특별자치도'
-			         ,'충청남도','충청북도'],
+			    ticks: ['강원','경기','경남','경북','광주','대구','대전','부산','서울','세종','울산','인천','전남','전북','제주','충남','충북'],
 			         textStyle: {
 		       				fontName:'Jeju Gothic',
 		   	    		    color: 'white',

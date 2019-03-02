@@ -30,7 +30,7 @@ function drawChart_Y() {
       	</c:forEach>
 	]);
 	var options = {
-			height: 400,
+			height: 300,
 	        lineWidth: 5,
   			pointSize: 20,
   			dataOpacity: 0.01,
@@ -62,8 +62,8 @@ function drawChart_Y() {
 					}
         		},
 			chartArea:{
-				width: '90%',
-				height: '75%'
+				width: '50%',
+				height: '60%'
 				},
 	        legend: { 
      	   		position: 'top',

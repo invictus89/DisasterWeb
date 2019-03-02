@@ -46,7 +46,7 @@ $(function() {
  					}
 
  					var options = {
- 						height : 400,
+ 						height : 300,
  						color : 'white',
  						animation: { startup: true, duration: 2500, easing: 'out' },
  						crosshair:{
@@ -68,7 +68,7 @@ $(function() {
  						  dataOpacity: 0.01,
  						backgroundColor: { fill:'transparent' },
  						chartArea:{
- 							width: '85%',
+ 							width: '50%',
  							height: '75%'
  						},
  						hAxis : {
@@ -76,14 +76,14 @@ $(function() {
  							textStyle : {
  								fontName:'Jeju Gothic',
  				    		    color: 'white',
- 				    		    fontSize: 12,
+ 				    		    fontSize: 11,
  				    		    bold: false,
  				    		    italic: false
  							},
  							titleTextStyle: {
  			    				fontName:'Jeju Gothic',
  				    		    color: 'white',
- 				    		    fontSize: 16,
+ 				    		    fontSize: 13,
  				    		    bold: false,
  				    		    italic: true
  				    		  },
@@ -98,7 +98,7 @@ $(function() {
  							textStyle : {
  								fontName:'Jeju Gothic',
  				    		    color: 'white',
- 				    		    fontSize: 12,
+ 				    		    fontSize: 11,
  				    		    bold: false,
  				    		    italic: false
  							},
@@ -109,7 +109,7 @@ $(function() {
  							titleTextStyle: {
  			    				fontName:'Jeju Gothic',
  				    		    color: 'white',
- 				    		    fontSize: 16,
+ 				    		    fontSize: 13,
  				    		    bold: false,
  				    		    italic: true
  				    		  }

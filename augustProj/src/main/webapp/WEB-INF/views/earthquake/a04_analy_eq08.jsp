@@ -24,26 +24,26 @@ $(function(){
 // 			console.log(earthquakeCountArray.earthquakecount[i].area, earthquakeCountArray.earthquakecount[i].count);
 // 			}
 		var options = {
-				height: 400,
+				height: 300,
 				animation: { startup: true, duration: 2500, easing: 'out' },
 				backgroundColor: { 
 					fill:'transparent'
 					},
 				titleTextStyle : {
-					fontSize : 20
+					fontSize : 15
 					},
 				legend :{
 					position : 'labeled',
 					textStyle : {
-						fontSize : 15,
+						fontSize : 12,
 						color: 'white',
 						bold : true
 						}
 					},
 				is3D: true,
 				chartArea:{
-					width: '90%',
-					height: '75%'
+					width: '70%',
+					height: '60%'
 					},
 				fontSize : null,
 				slices: {

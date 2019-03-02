@@ -40,7 +40,7 @@ $(function(){
 					if(i!=8){				
 						data.addRows([[{v:code[i],f:regions[i]},parseInt(area.areaanalysis[i].eqCountArea)]]);
 						magnitude[code[i]] =
-							'<span style="font-size:1.3em; font-weight:800;">'+regions[i]+'</span>'
+							'<span style="font-size:12px; font-weight:800;">'+regions[i]+'</span>'
 							+'<table border=1; class="overTbl">'
 							+'<tr><th style="text-align:center">규모</th><th style="text-align:center">지진 발생횟수</th></tr> <tr><td> '
 											+'규모 0~1 </td><td >'+area.areaanalysis[i].magnitudeUnderOne+'</td></tr> <tr><td>'
@@ -55,7 +55,7 @@ $(function(){
 				}
 				console.log(magnitude);
 			  var options = {
-				height: 400,
+				height: 300,
 				backgroundColor: {fill:'transparent',stroke:'#FFFFFF' ,strokeWidth:0 },
 				backgroundColor: {fill:'transparent',stroke:'#FFFFFF' ,strokeWidth:0 },	
 			    region: 'KR',

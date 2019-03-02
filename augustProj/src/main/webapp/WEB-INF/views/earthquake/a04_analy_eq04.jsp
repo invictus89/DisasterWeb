@@ -29,7 +29,7 @@ function drawChart_M() {
 			backgroundColor:{
 				fill:'transparent'
 				},
-           	height: 400,
+           	height: 300,
            	lineWidth: 5,
  		  	pointSize: 20,
  		  	dataOpacity: 0.01,
@@ -47,7 +47,7 @@ function drawChart_M() {
   				textStyle: {
 	    			fontName:'Jeju Gothic',
 	  	    		color: 'white',
-	  	    		fontSize: 12,
+	  	    		fontSize: 11,
 					bold: false,
 					italic: false
 				}
@@ -56,7 +56,7 @@ function drawChart_M() {
 				textStyle : {
 					fontName:'Jeju Gothic',
 	    		    color: 'white',
-	    		    fontSize: 12,
+	    		    fontSize: 11,
 	    		    bold: false,
 	    		    italic: false
 				}
@@ -66,7 +66,7 @@ function drawChart_M() {
        	   		textStyle: {
   					fontName:'Jeju Gothic',
 	    		    color: 'white',
-	    		    fontSize: 16,
+	    		    fontSize: 14,
 	    		    bold: false,
 	    		    italic: false
     		    }

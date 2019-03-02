@@ -26,12 +26,12 @@
     text-align: center;
 }
 
-/* ±×·¡ÇÁ overview css */
+/* ï¿½×·ï¿½ï¿½ï¿½ overview css */
 #overview > .flot-base{
 	width:100%;
 }
 
-/*½Ç½Ã°£ µ¥ÀÌÅÍ ¹Þ¾Æ¿À±â Àü °¢ Ã¢ 'µ¥ÀÌÅÍ ¾øÀ½' Ç¥½Ã °ü·Ã css*/
+/*ï¿½Ç½Ã°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¾Æ¿ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ Ã¢ 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½' Ç¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ css*/
 .empty-data{
 	color:#666;
 	margin-top:10%;
@@ -847,8 +847,6 @@ pre code {
     margin-right: auto;
     margin-left: 7px;
     overflow-y: auto;
-    max-height: 1152px;
-    
 }
 
 .row {
@@ -4946,12 +4944,6 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:focus,
 	padding: 15px
 }
 
-.panel-heading {
-	padding: 8px 15px;
-	border-bottom: 1px solid transparent;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
-}
 
 .panel-heading>.dropdown .dropdown-toggle {
 	color: inherit

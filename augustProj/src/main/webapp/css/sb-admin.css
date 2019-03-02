@@ -3,7 +3,7 @@
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
-/* ¿¹ÃøºÎºÐ    */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½    */
 select.locSelectBox {
     width: 100px;
     height: 20px;
@@ -11,23 +11,20 @@ select.locSelectBox {
 }
 .banner-div{
     display: inline-block;
-    width: 11%;
+    width: 257px;
     float: left;
-    height: 47px;
-    padding: 0;
 }
 .banner-div a{
 	margin: 0;
     padding: 0;
 }
 img.main-banner{
-    width: 85%;
+    width: 75%	;
     display: inline-block;
-    margin-top: -13px;
-    margin-left: 1px;
+    margin-left: 20px;
 }
 .dash-img01{
-	width: 75%;
+	width: 50%;
 }
 .red{
 	color: red;
@@ -39,22 +36,25 @@ img.main-banner{
 	color: green;
 }
 .degree-div{
-    font-size: 90px;
-    margin-top: 40px;
-    margin-bottom: 55px;
+    font-size: 40px;
+    margin-bottom: 22px;
+    margin-top: 15px;
 }
 .loading-div{
-    width: 400px;
-    height: 400px;
+  	top: 70px;
+    left: 20px;
+    width: 225px;
+    height: 331px;
     background: url(../img/loading.gif);
-    background-size: 400px 400px;
+    background-size: 373px 362px;
     display: inline-block;
     position: absolute;
     z-index: 100;
     opacity: 1;
     -webkit-transition: opacity 0.29s;
-	-o-transition: opacity 0.29s;
-	transition: opacity 0.29s;
+    -o-transition: opacity 0.29s;
+    transition: opacity 0.29s;
+}
 }
 .show-loading{
 	opacity: 1;
@@ -70,8 +70,8 @@ img.main-banner{
 }
 .panel-dash{
     max-height: 300px;
-    height: 300px;
-    font-size: 22px !important;
+    height: 160px;
+    font-size: 15px !important;
 }
 #descriptionButton {
 	left: 300px;
@@ -121,14 +121,9 @@ div.preferencesView h4{
 }
 
 .top-Menu{
-	width:120px;
     font-size: 1.4em;
     font-weight: 800;
     text-align: center;
-    line-height: 1em;
-    margin: 0px 3px;
-    background: rgba(0,0,0,0.6);
-    margin-top: -3px;
 }
 .top-Menu:hover{
 	outline: none;
@@ -136,7 +131,6 @@ div.preferencesView h4{
 	background-color: rgba(0, 0, 0, 0.65);
 	color: white;	
 }
-/* Á¾ÇÕºÐ¼® ±¸±Û ±×·¡ÇÁ CSS */
 .onoff{
 	margin: 17px 0 0 19px;
     color: white;
@@ -151,15 +145,12 @@ div.preferencesView h4{
 }
 .div-btn{
 	display: inline-block;
-    width: 24%;
+    width: 20%;
     margin: 0 !important;
     padding: 0 !important;
-    height: 34px;
+    height: 31px;
     color: white;
-    font-size: 1.7em;
-    -webkit-transition: background 0.49s;
-	-o-transition: background 0.49s;
-	transition: background 0.49s;
+    font-size: 1.2em;
 }
 .div-btn:hover{
 	background:rgba(0,0,0,0.5);
@@ -174,16 +165,17 @@ div.preferencesView h4{
     padding:3px 0px;
 }
 .overt {
+	color:white;
    	position: absolute;
-    top: 200px;
-    left: 560px;
-    background: rgba(255,255,255,0.75);
+    top: 13%;
+    left: 56%;
+    background: rgba(255,255,255,0.05);
     box-shadow: 2px 2px 3px rgba(0,0,0,0.7);
 }
 .overTbl{
 	text-align: center;
-    font-size: 1.1em;
-	width: 230px;
+ 	font-size: 12px;
+    width: 160px;
 }
 .overTbl *{
 	padding: 3px;
@@ -191,7 +183,7 @@ div.preferencesView h4{
 .overTbl th{
 	color: white;
 	font-weight: 800;
-	font-size: 1.2em;
+	font-size: 1.0em;
 	background: rgba(0,0,0,0.5);
 }
 .overTbl tr > td:nth-child(1){
@@ -324,18 +316,15 @@ div.preferencesView h4{
 }
 .ui-onoff{
 	color: gray;
-    width: 150px;
     font-size: 1.1em;
     line-height: 1.6em;
-    background: rgba(0,0,0,0.25);
-    left: 49%;
 }
 .ui-onoff div{
-    display: inline-block;
-    margin: 0px;
-    width: 75px;
-    padding-left: 6px;
-    float: left;
+display: inline-block;
+    margin: 10px;
+    padding-right: 11px;
+    float: right;
+    font-size: 18px;
 }
 .glyphicon-play{
 	color:rgba(0,215,0,0.9);
@@ -349,7 +338,7 @@ div.preferencesView h4{
 .ui-onoff, .ui-keyword {
 	position: relative;
 	display: inline-block;
-	float: left;
+	float: right;
 }
 .real-drop{
 	background: rgba(255,255,255,0.1);
@@ -441,7 +430,7 @@ div.preferencesView h4{
 	/*background-color: dimgrey;*/
 	
 }
-/* ÇüÂùÀÌ, mouseover pop up */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, mouseover pop up */
 #infoContent {
 	/* background-color: rgba(0, 0, 0, 0.5);
 	width: 150px;
@@ -467,15 +456,14 @@ div.preferencesView h4{
 }
 /*realtime - year search*/
 .year-container {
-	position: absolute;
-	z-index: 1;
-	margin-left: 5.1%;
-	height: auto;
-	margin-top: 0.4%;
-	border-radius: 0px;
+    position: absolute;
+    z-index: 1;
+    border-radius: 0px;
+    top: 61px;
+    left: 440px;
 }
 
-/*¸Ê ºÎºÐ ÁöÁø ±×·¡ÇÁ*/
+/*ï¿½ï¿½ ï¿½Îºï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½×·ï¿½ï¿½ï¿½*/
 select#year {
 	height: 36px;
 	border-radius: 5px;
@@ -562,6 +550,7 @@ select#year {
 }
 
 #wrapper {
+	overflow: scroll;
 	padding-left: 0;
 	height: 100%;
 }
@@ -594,10 +583,11 @@ select#year {
     text-align: center;
     color: white;
     font-weight: 800;
-    font-size: 30px;
+    font-size: 18px;
     width: 100%;
     display: inline-block;
     box-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    padding:10px;
 }
 .anal-back{
 	background: rgba(0,0,0,0.15);
@@ -629,7 +619,7 @@ select#year {
 	background: rgba(255,255,255,0.2) !important;
 }
 .anal-title{
-	font-size: 25px;
+	font-size: 15px;
     color: white;
 }
 .anal-body{
@@ -637,7 +627,8 @@ select#year {
 	background: transparent;
 }
 #wordIMG{
-    height: 400px;
+ 	height: 320px;
+    left: 0px;
     display: inline-block;
     padding: 4px;
     
@@ -794,7 +785,7 @@ div.google-visualization-tooltip{
 	margin-bottom:5px;
 }
 
-/* ÁöÁø ¿¹Ãø ºÎºÐ */
+/* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Îºï¿½ */
 .forecastDistance h6{
 	text-align:left;
 }
@@ -829,11 +820,10 @@ div.google-visualization-tooltip{
 		border: none;
 		border-radius: 0;
 		overflow-y: auto;
-		/*background-color: #222;*/
 		bottom: 0;
 		overflow: hidden;
-		/*padding-bottom: 40px;*/
 		text-align: center;
+		overflow: scroll;
 	}
 	.side-nav>li {
 		font-size: 17px;
@@ -842,7 +832,7 @@ div.google-visualization-tooltip{
 	}
 	.side-nav>li>a {
 		display: inline-block;
-		font-size: 14px;
+		font-size: 12px;
 		width: 95%;
 		color: lightgray;
 		border-radius: 6px;
